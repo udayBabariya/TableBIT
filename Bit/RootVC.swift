@@ -16,9 +16,18 @@ class RootVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("toggleSideMenu") , object: nil)
        
-    }	
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+         NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("toggleSideMenu") , object: nil)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+    }
     
     func toggleSideMenu(){
         

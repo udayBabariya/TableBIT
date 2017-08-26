@@ -42,5 +42,17 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        NotificationCenter.default.post(name: NSNotification.Name("toggleSideMenu"), object: nil)
+        switch indexPath.row{
+        case 1: NotificationCenter.default.post(name: NSNotification.Name("openBitNews"), object: nil)
+
+        case 2: NotificationCenter.default.post(name: NSNotification.Name("openBusiness"), object: nil)
+            
+        default: break
+            
+            
+        }
+        
     }
 }
