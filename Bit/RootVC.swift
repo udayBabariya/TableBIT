@@ -11,7 +11,7 @@ import UIKit
 class RootVC: UIViewController {
 
     @IBOutlet weak var sideMenuLeftConstraint: NSLayoutConstraint!
-    var sideMenuOpen = false
+//    var sideMenuOpen = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -128,6 +128,23 @@
                     <view key="view" contentMode="scaleToFill" id="nCH-2g-Wzg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8t-6G-h0i">
+                                <rect key="frame" x="112" y="306" width="150" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQX-eZ-eIf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onBack:" destination="npR-LU-lMt" eventType="touchUpInside" id="nQY-aG-ILl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="2r1-GJ-aoL">
@@ -138,6 +155,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnBack" destination="qQX-eZ-eIf" id="2FU-n7-n3U"/>
                         <segue destination="sVU-wb-z06" kind="show" identifier="openBitNews" id="E7j-cv-mSN"/>
                         <segue destination="gHv-zK-KXf" kind="show" identifier="openBusiness" id="6Gf-7F-N4y"/>
                     </connections>
