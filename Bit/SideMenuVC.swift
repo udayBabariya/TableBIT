@@ -48,7 +48,6 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
 
         case 0 : NotificationCenter.default.post(name: NSNotification.Name("openHome"), object: nil)
         case 1: NotificationCenter.default.post(name: NSNotification.Name("openBitNews"), object: nil)
-
         case 2: NotificationCenter.default.post(name: NSNotification.Name("openBusiness"), object: nil)
             
         default: break

@@ -19,6 +19,7 @@ class SideMenuCell: UITableViewCell {
 
     func configureCell(sideMenu: SideMenu) {
         self.lblText.text = sideMenu.text
+        self.imgView.image = sideMenu.img
     }
     
 

@@ -11,18 +11,20 @@ import UIKit
 class SideMenu: NSObject {
     
     var text:String!
+    var img:UIImage!
     
-    init(text: String) {
+    init(text: String,img: UIImage) {
         self.text = text
+        self.img = img
     }
     
     static func sampleSideMenu() -> [SideMenu]{
         
         var sidemenuArr = [SideMenu]()
         
-        let home = SideMenu(text: "Home")
-        let BitNews = SideMenu(text: "BitNews")
-        let Business = SideMenu(text: "Business")
+        let home = SideMenu(text: "Home", img: UIImage(named: "home")!)
+        let BitNews = SideMenu(text: "BitNews", img: UIImage(named: "news")!)
+        let Business = SideMenu(text: "Business", img: UIImage(named: "business")!)
         
         sidemenuArr.append(home)
         sidemenuArr.append(BitNews)
